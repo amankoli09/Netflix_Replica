@@ -1,7 +1,9 @@
 <p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" width="220" /> </p>
 
 🎬 Netflix Clone
-
+![HTML5](https://img.shields.io/badge/HTML5-USED-orange)
+![CSS3](https://img.shields.io/badge/CSS3-ACTIVE-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ENABLED-yellow)
 📌 About the Project
 
 This is a Netflix-inspired frontend web application built using HTML, CSS, and JavaScript.
