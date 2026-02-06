@@ -13,6 +13,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ENABLED-yellow)
 
 ---
+Live Demo : https://netflix-replica-gamma.vercel.app/
 
 ## 📌 About the Project
 
