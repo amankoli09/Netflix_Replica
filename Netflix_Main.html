@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix India</title>
+
+    <style>
+        body {
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/e393bb3f-261f-43d1-99bb-16a157885615/web/IN-en-20260105-TRIFECTA-perspective_2802b120-4b8c-44a5-8fb9-617a728f4ec6_large.jpg);
+            background-size: 1800px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+        }
+
+        .logo {
+            width: 150px;
+            height: 80px;
+            margin-left: 90px;
+            margin-top: 20px;
+        }
+
+        .wraper {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.867);
+            height: 90vh;
+            width: 34%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h3 {
+            color: white;
+            font-size: 32px;
+            padding-right: 275px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .input-box {
+            width: 75%;
+            height: 54px;
+            background: rgba(63, 62, 62, 0.312);
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding-left: 10px;
+            color: white;
+        }
+
+        .sign-in-button {
+            width: 75%;
+            height: 45px;
+            background: #e50914;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 17px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .sign-in-code {
+            width: 75%;
+            height: 45px;
+            background: rgba(101, 100, 100, 0.474);
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .top-controls {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+        }
+
+        .language-select {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 1px solid gray;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-controls">
+    <select class="language-select">
+        <option>English</option>
+        <option>हिन्दी</option>
+    </select>
+</div>
+
+<div class="logo">
+    <svg fill="red" viewBox="0 0 111 30">
+        <path d="M105.06233,14.2806261 L110.999156,30"></path>
+    </svg>
+</div>
+
+<div class="wraper">
+    <div class="overlay">
+        <h3>Sign in</h3>
+
+        <form onsubmit="login(event)">
+            <input type="email" id="email" class="input-box" placeholder="Email or mobile number" required>
+            <br><br>
+
+            <input type="password" id="password" class="input-box" placeholder="Password" required>
+            <br><br>
+
+            <button type="submit" class="sign-in-button">Sign In</button>
+
+            <p style="color: rgb(175,175,175);">OR</p>
+
+            <button type="button" class="sign-in-code">Use a sign-in code</button>
+
+            <p style="color:white;"><u>Forgot password?</u></p>
+        </form>
+    </div>
+</div>
+
+<script>
+function login(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    if (password.length < 4) {
+        alert("Password must be at least 4 characters");
+        return;
+    }
+
+    window.location.href = "Netflix_Plan.html";
+}
+</script>
+
+</body>
+</html>

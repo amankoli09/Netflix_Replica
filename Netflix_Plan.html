@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Plan</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 120px;
+        }
+        .title {
+            text-align: center;
+            margin: 30px 0 10px;
+        }
+
+        .step {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .title h1 {
+            margin: 8px 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* PLANS */
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            padding: 30px 20px;
+        }
+
+        .plan {
+            width: 240px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border 0.2s ease;
+        }
+
+        .plan.active {
+            border-color: #0071eb;
+        }
+
+        .plan-header {
+            padding: 18px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .mobile { background: linear-gradient(135deg, #1f4ed8, #2563eb); }
+        .basic { background: linear-gradient(135deg, #4f46e5, #7c3aed); }
+        .standard { background: linear-gradient(135deg, #5b21b6, #9333ea); }
+        .premium { background: linear-gradient(135deg, #312e81, #dc2626); }
+
+        .most-popular {
+            background: #6b7280;
+            color: white;
+            text-align: center;
+            font-size: 13px;
+            padding: 6px;
+        }
+
+        .plan-body {
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        .row {
+            margin-bottom: 12px;
+        }
+
+        .row span {
+            color: #111;
+            font-weight: bold;
+        }
+
+        .note {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .next-btn {
+            display: block;
+            margin: 30px auto 50px;
+            padding: 16px 60px;
+            font-size: 18px;
+            background: #e50914;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+</div>
+
+
+<div class="title">
+    <div class="step">Step 2 of 3</div>
+    <h1>Choose the plan that’s right for you</h1>
+</div>
+
+
+<div class="plans">
+
+    <div class="plan active" onclick="selectPlan(this)">
+        <div class="plan-header mobile">Mobile<br><small>480p</small></div>
+        <div class="plan-body">
+            <div class="row">Monthly price<br><span>₹149</span></div>
+            <div class="row">Video quality<br><span>Fair</span></div>
+            <div class="row">Resolution<br><span>480p</span></div>
+            <div class="row">Devices<br><span>Mobile, Tablet</span></div>
+            <div class="row">Watch at same time<br><span>1</span></div>
+            <div class="row">Downloads<br><span>1</span></div>
+        </div>
+    </div>
+
+    <div class="plan" onclick="selectPlan(this)">
+        <div class="most-popular">Most Popular</div>
+        <div class="plan-header basic">Basic<br><small>720p</small></div>
+        <div class="plan-body">
+            <div class="row">Monthly price<br><span>₹199</span></div>
+            <div class="row">Video quality<br><span>Good</span></div>
+            <div class="row">Resolution<br><span>720p (HD)</span></div>
+            <div class="row">Devices<br><span>TV, Mobile, Tablet</span></div>
+            <div class="row">Watch at same time<br><span>1</span></div>
+            <div class="row">Downloads<br><span>1</span></div>
+        </div>
+    </div>
+
+    <div class="plan" onclick="selectPlan(this)">
+        <div class="plan-header standard">Standard<br><small>1080p</small></div>
+        <div class="plan-body">
+            <div class="row">Monthly price<br><span>₹499</span></div>
+            <div class="row">Video quality<br><span>Great</span></div>
+            <div class="row">Resolution<br><span>1080p (Full HD)</span></div>
+            <div class="row">Devices<br><span>TV, Mobile, Tablet</span></div>
+            <div class="row">Watch at same time<br><span>2</span></div>
+            <div class="row">Downloads<br><span>2</span></div>
+        </div>
+    </div>
+
+    <div class="plan" onclick="selectPlan(this)">
+        <div class="plan-header premium">Premium<br><small>4K + HDR</small></div>
+        <div class="plan-body">
+            <div class="row">Monthly price<br><span>₹649</span></div>
+            <div class="row">Video quality<br><span>Best</span></div>
+            <div class="row">Resolution<br><span>4K + HDR</span></div>
+            <div class="row">Devices<br><span>TV, Mobile, Tablet</span></div>
+            <div class="row">Watch at same time<br><span>4</span></div>
+            <div class="row">Downloads<br><span>6</span></div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="note">
+    HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your
+    internet service and device capabilities. Not all content is available in all
+    resolutions.
+</div>
+
+
+<button class="next-btn" onclick="goNext()">Next</button>
+
+<script>
+    function selectPlan(plan) {
+        document.querySelectorAll('.plan').forEach(p => p.classList.remove('active'));
+        plan.classList.add('active');
+    }
+
+    function goNext() {
+        window.location.href = "Netflix_Payment.html";
+    }
+</script>
+
+</body>
+</html>

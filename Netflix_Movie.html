@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Netflix – Browse</title> 
+<style> 
+body { 
+    margin: 0; 
+    background-color: black; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: white; 
+} 
+h2 { 
+    margin: 30px; 
+} 
+.movies-row { 
+    display: flex; 
+    gap: 40px; 
+    padding: 0 30px 30px; 
+    overflow-x: auto; 
+} 
+.movie-card { 
+    width: 200px; 
+    cursor: pointer; 
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+    will-change: transform; 
+} 
+
+.movie-card:hover {
+    transform: scale(1.1); 
+    color: #e9eaea; 
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.movie-card img { 
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    display: block; 
+} 
+.movie-title { 
+    margin-top: 8px; 
+    font-size: 14px; 
+    text-align: center; 
+    color: #e5e5e5; 
+} 
+.movies-row::-webkit-scrollbar { 
+    display: none; 
+} 
+</style> 
+</head> 
+
+<body> 
+
+<h2>Trending Now</h2> 
+<div class="movies-row"></div> 
+
+<h2>Popular on Netflix</h2> 
+<div class="movies-row"></div> 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const cardData = [
+        {
+            title: "Spider-Man: Far From Home",
+            image: "https://i.pinimg.com/736x/04/9c/55/049c556e41b013ca50cc990d89f74302.jpg"
+        },
+        {
+            title: "Havoc",
+            image: "https://static0.colliderimages.com/wordpress/wp-content/uploads/sharedimages/2025/04/01632821_poster_w780.jpg"
+        },
+        {
+            title: "Venom",
+            image: "https://i.pinimg.com/736x/2a/26/ee/2a26ee95731f2c54f1505eb5db56a5cf.jpg"
+        },
+        {
+            title: "DeadPool",
+            image: "https://i.pinimg.com/736x/12/4c/dd/124cdd849ceaeb8c338caee0330a456a.jpg"
+        },
+        {
+            title: "Fury",
+            image: "https://i.pinimg.com/736x/88/d0/52/88d0525e419997c060ca81728b6b3019.jpg"
+        },
+        {
+            title: "Strange Things",
+            image: "https://i.pinimg.com/736x/e7/0d/39/e70d39ab29cd35545fa726de0b7414fa.jpg"
+        },
+        {
+            title: "Zootopia 2",
+            image: "https://i.pinimg.com/736x/71/35/0b/71350b181615d7a65e311c4c5925b495.jpg"
+        },
+        {
+            title: "Dark",
+            image: "https://i.pinimg.com/1200x/e8/2f/82/e82f828f60f7d210d7c8574595c771e9.jpg"
+        },
+        {
+            title: "Peaky Blinders",
+            image: "https://i.pinimg.com/736x/e0/05/47/e0054761767685e84ad65f6c766ca767.jpg"
+        },
+        {
+            title: "Bridgerton",
+            image: "https://i.pinimg.com/1200x/76/6a/5d/766a5d86a2ceb6d66bae75ebde81ecb4.jpg"
+        },
+        {
+            title: "People We Meet on Vacation",
+            image: "https://resizing.flixster.com/25CKNhiKNu9u00Hu_yGUX76PdgA=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzNhZGJmMTVjLWU2ZWMtNDk0Mi1iNjVlLWJhOTBlZGNlMTY3NC5qcGc="
+        },
+        {
+            title: "The Rip",
+            image: "https://i.pinimg.com/1200x/ec/81/1a/ec811ac4bc121fce2e67c428ca21fbf2.jpg"
+        }
+    ];
+
+    const rows = document.querySelectorAll(".movies-row");
+
+    const trendingRow = rows[0];
+    const popularRow = rows[1];
+
+    const half = Math.ceil(cardData.length / 2);
+
+    const trendingMovies = cardData.slice(0, half);
+    const popularMovies = cardData.slice(half);
+
+    function createCard(data) {
+        const card = document.createElement("div");
+        card.classList.add("movie-card");
+
+        card.innerHTML = `
+            <img src="${data.image}" alt="${data.title}">
+            <div class="movie-title">${data.title}</div>
+        `;
+        return card;
+    }
+
+    trendingMovies.forEach(movie => {
+        trendingRow.appendChild(createCard(movie));
+    });
+
+    popularMovies.forEach(movie => {
+        popularRow.appendChild(createCard(movie));
+    });
+
+});
+</script>
+
+
+</body> 
+</html>

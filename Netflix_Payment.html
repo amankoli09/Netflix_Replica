@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Netflix India</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header img {
+            width: 120px;
+            cursor: pointer;
+        }
+
+        .header p {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .Main-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .content {
+            width: 440px;
+            text-align: left;
+        }
+
+        .lock-img {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .step {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 10px 0 15px;
+        }
+
+        .paragraph {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #555454;
+        }
+
+        .small {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .payment-box {
+            border: 1px solid #ccc;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .payment-box img{
+            width: 11%;
+        }
+        .payment-box:hover {
+            border-color: #e50914;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .end-to-end-text {
+            font-size: 13px;
+            color: #555;
+            text-align: right;
+            margin-bottom: 8px;
+        }
+        .next-btn {
+            display: block;
+            margin: 30px auto 50px;
+            padding: 16px 60px;
+            font-size: 18px;
+            background: #e50914;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+        <p>Sign out</p>
+    </div>
+
+    <div class="Main-content">
+        <div class="content">
+
+            <div class="lock-img">
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Lock.png">
+            </div>
+
+            <div class="step">Step 3 of 3</div>
+
+            <h1>Choose how to pay</h1>
+
+            <p class="paragraph">
+                Your payment is encrypted and you can change how you pay at any time.
+            </p>
+
+            <p class="small">
+                <strong>Secure for peace of mind.</strong><br>
+                <strong>Cancel easily online.</strong>
+            </p>
+
+            <div class="end-to-end-text">End-to-end encrypted 🔐</div>
+
+            <div class="payment-box">
+                Credit or Debit Card <img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/VISA@2x.png" alt=""><img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/MASTERCARD@2x.png" alt="">
+                <span class="arrow">›</span>
+            </div>
+
+            <div class="payment-box">
+                UPI AutoPay <img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/BHIM@2x.png" alt="">
+                <img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/PAYTM@2x.png" alt="">
+                <img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/PHONEPE@2x.png" alt="">
+                <img src="https://assets.nflxext.com/siteui/acquisition/payment/ffe/paymentpicker/GPAY@2x.png" alt="">
+                <span class="arrow">›</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+<button class="next-btn" onclick="goNext()">Next</button>
+<script>
+    function goNext()
+    {
+        window.location.href="Netflix_Movie.html";
+    }
+</script>
+</html>
