@@ -1,11 +1,4 @@
 <p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" width="220" /> </p>
-<p align="center">
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-    width="450"
-    alt="Netflix Logo"
-  />
-</p>
 
 🎬 Netflix Clone
 
