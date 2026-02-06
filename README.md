@@ -15,6 +15,11 @@
 ---
 Live Demo : https://netflix-replica-gamma.vercel.app/
 
+<img width="1470" height="823" alt="Screenshot 2026-02-06 at 1 54 25 PM" src="https://github.com/user-attachments/assets/ff40d936-4ce0-4dc5-8e2d-3249dff9520a" />
+<img width="1470" height="823" alt="Screenshot 2026-02-06 at 1 54 07 PM" src="https://github.com/user-attachments/assets/3d25999c-b280-45a0-aa25-85746a4dfd6b" />
+<img width="1470" height="823" alt="Screenshot 2026-02-06 at 1 54 46 PM" src="https://github.com/user-attachments/assets/b9ba4b16-badf-40ad-98e1-a093f1d9d5af" />
+
+
 ## 📌 About the Project
 
 This is a **Netflix-inspired frontend web application** built using **HTML, CSS, and JavaScript**.  
